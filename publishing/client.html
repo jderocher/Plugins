@@ -1,0 +1,101 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+
+					<div class="alert alert-success alert-dismissible" role="alert" >
+					  <h4>
+					  	Following data will be sent to the Vuevent API endpoint:
+					  </h4>
+					  <ul id="alert-content">
+					  
+					  </ul>
+					</div>
+
+					<div class="page-header">
+						<h2>CLIENT EVENT CREATION FORM</h2>		
+					</div>
+				
+					<!--  CLIENT FORM START -->
+					
+					<form id="form-client-event-create" role="form" method="post">
+					  <div class="form-group">
+					    <label for="eventName">Event Name</label>
+					    <input type="email" class="form-control" id="eventName" placeholder="Enter event name">
+					  </div>
+					  <div class="form-group">
+					    
+					    <label for="eventDescription">Event Description</label>
+					    <textarea id="eventDescription" class="form-control" placeholder="Enter event description"></textarea>
+					    
+					  </div>
+					  
+					  <div class="row">
+					  	<div class="col-lg-6">
+							  <div class="form-group">
+							    
+							    <label for="startDate">Event Start Date</label>
+							    <input id="startDate" class="form-control" placeholder="Enter start date"></textarea>
+							    
+							  </div>
+						</div>
+						<div class="col-lg-6">
+						  <div class="form-group">
+						    
+						    <label for="endDate">Event End Date</label>
+						    <input id="endDate" class="form-control" placeholder="Enter event end date"></textarea>
+						    
+						  </div>
+						 </div>
+					  </div>
+					  
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					
+					<!-- //CLIENT FORM ENDS -->
+					
+				</div>
+			</div>
+		</div>
+		
+		<p><a href="http://www.yahoo.com" title="yahoo.com" id="vueventWindowAuthentication">open popup</a></p>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="/Users/n4v/Projects/Web/Vuevent/vuevents/files/assets/js/plugins/vuevents/jquery.popupWindow.js"></script>
+		
+		<script src="vuevent.publish.js"></script>
+		
+		<script>
+			$(document).ready(function(){
+				
+				$('.alert').hide();
+				
+				$('#form-client-event-create').publishEvent({
+						
+						client_id: 'nPDTsxSSbncJC11JP-XCnu!QoWanSmnJVZwfuP4P',
+						client_secret: 'DXhKznbM:=lfZ?y=Xg2EJnr1.dtwCnF@MR08IZc.pGk6Pv=DjcOeBT-mO:=nmfx1Ks;:6Bx9SiqiM.;h9n@L1cFWi9j2sK0zCfE2gT:gkM5WYvXm5YOl_!NF5ERWS6vx',
+					
+						fieldName: 'eventName',
+						fieldDescription: 'eventDescription',
+						fieldStartDate: 'startDate',
+						fieldEndDate: 'endDate',
+					
+				});
+				
+			});
+		</script>
+		
+		
+	</body>
+	
+	
+</html>

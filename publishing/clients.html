@@ -1,0 +1,58 @@
+<html>
+	
+	<body>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<p><a href="http://www.yahoo.com" title="yahoo.com" class="example1demo">open popup</a></p> 
+		
+		<script>
+			
+		
+			var client_id = 'nPDTsxSSbncJC11JP-XCnu!QoWanSmnJVZwfuP4P';
+			//var client_secret = 'DXhKznbM:=lfZ?y=Xg2EJnr1.dtwCnF@MR08IZc.pGk6Pv=DjcOeBT-mO:=nmfx1Ks;:6Bx9SiqiM.;h9n@L1cFWi9j2sK0zCfE2gT:gkM5WYvXm5YOl_!NF5ERWS6vx';
+			var url = 'http://vuevents.com/o/authorize/';
+			
+			data = {
+					
+					'client_id': client_id,
+			}
+			
+			var access_response = null;
+			
+			$(document).ready(function(){
+				
+				 $.ajax({
+		            url: url,
+		            type: "GET",
+		            crossDomain: true,
+		            dataType: 'json',
+		            data: data,
+		            success: function (response) {
+		            	
+		            	
+		            	access_response = response;
+		            	console.log( access_response)
+		            	console.log( access_response['access_token'])
+		            		
+		            	
+		            	
+		            	
+		            	
+		            },
+		            error: function (xhr, status) {
+		            	
+		            }
+		        });
+				
+				
+			});
+		</script>
+		
+		<div id="console">
+		
+		</div>
+		
+	</body>
+	
+</html>

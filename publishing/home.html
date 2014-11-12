@@ -1,0 +1,110 @@
+{% load staticfiles %}
+
+<html>
+	
+	<body>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+			
+		
+		<div class="text-center">
+			<br><br><br>
+			<a href="#" id="vueventPublishWindow" class="btn btn-primary">Submit</a>
+		</div>	
+				
+		<script>
+		
+			var client_id = 'uqjSwKuBe.4tShiXzEl!1oY8KkSaNy=EVrDnf2CI';
+			
+			var url = 'http://vuevents.com/o/authorize/';
+			
+			var baseURI = 'http://vuevents.com';
+			
+			var data = {
+				'client_id': client_id,
+				'response_type': 'token',
+	            'state': Math.random().toString(36).slice(2),
+	            'scope': 'read write',
+	            'redirect_uri': 'http://localhost:8888',
+	      	};
+			
+			var access_response = null;
+			
+			//EXTRACT PARAMETERS FROM A RETURNED URL
+			function getQuery( query ) {
+		        
+				if (/\/#/g.test(query)){
+					var paramStringList = query.split('/#');
+				} else if (/\/?/g.test(query)){
+					var paramStringList = query.split('/?');
+				}
+				
+				var params = {};
+				
+				if(paramStringList.length == 2){
+					var paramPairList = paramStringList[1].split('&');
+					
+					$.each(paramPairList, function(index, pairString){
+						var pairList = pairString.split('=');
+						if (pairList.length == 2){
+							params[pairList[0]] = pairList[1]
+						}
+					});
+				}
+				
+				return params;
+		    };
+			//HANDLE INFORMATION RETURNED FROM THE AUTHORIZATION WINDOW
+			function HandlePopupResult(result) {
+				
+				console.log(result);
+				
+			    var params = getQuery(result);
+			    
+			    $.ajax({
+			    	  url: baseURI + '/events/',
+			    	  method: 'GET',
+			    	  crossDomain: true,
+			    	  beforeSend: function( xhr ) {
+			    		  xhr.setRequestHeader('Authorization', 'Bearer ' +  params['access_token']);
+			    	  },
+			    	  success: function(result){
+			    		  console.log('Result is', result)
+			    	  },
+			    	  statusCode: {
+			    		  404: function() {
+			    			  $('#vueventConsole').text('NOT FOUND: Could not find the url location.');
+			    		  },
+			    		  401: function() {
+			    			  $('#vueventConsole').text('UNAUTHORIZED: There was an error authenticating you.');
+			    		  }
+		    		  }
+		    	});			    
+			}	
+			
+			
+			
+			$(document).ready(function(){
+				
+				$('#vueventPublishWindow').click(function(e){
+					e.preventDefault();
+					url = url + '?' + $.param(data);
+					window.open(url);
+				});
+				
+	            try {
+	                window.opener.HandlePopupResult(location.href);
+	                window.close();
+	            } catch (err) {}
+				
+			});
+		</script>
+
+		<div id="vueventConsole">
+			
+		</div>
+		
+	</body>
+	
+</html>
