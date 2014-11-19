@@ -26,17 +26,12 @@ To use this plugin, you need to have an account and an application setup on Vuev
 ### Plugin usage
 
 1. Requirements:
-
-	a. JQuery:
-		```html 
-			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		``` 
-		
-	b. Vuevent Publisher Plugin
 	
-		```html 
-			<script src="http://some_cdn/vuevent.publish.min.js"></script>
-		``` 
+		```html
+			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		```
+	
+	
 
 2. Setup:
 
