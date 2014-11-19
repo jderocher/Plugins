@@ -37,6 +37,7 @@ To use this plugin, you need to have an account and an application setup on Vuev
 
 2. Setup:
 
+	```html 
 	<script>
 		$(document).ready(function(){
 			
@@ -54,6 +55,7 @@ To use this plugin, you need to have an account and an application setup on Vuev
 			});
 		});
 	</script>
+	```
 
 
 
