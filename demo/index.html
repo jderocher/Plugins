@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
+			
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+
+					<div class="alert alert-success alert-dismissible" role="alert" >
+					  <h4>
+					  	This form will be used to publish an event directly to Vuevent.
+					  </h4>
+					</div>
+
+					<div class="page-header">
+						<h2>YOUR EVENT FORM</h2>		
+					</div>
+				
+					<!--  CLIENT FORM START -->
+					
+					<form id="event-form" role="form" method="post">
+					  <div class="form-group">
+					    <label for="eventTitle">Event Name</label>
+					    <input type="text" class="form-control" id="eventTitle" placeholder="Enter event name">
+					  </div>
+					  <div class="form-group">
+					    
+					    <label for="eventLocation">Event Location</label>
+					    <textarea id="eventLocation" class="form-control" placeholder="Enter Location"></textarea>
+					    
+					  </div>
+					  <div class="form-group">
+					    
+					    <label for="eventDescription">Event Description</label>
+					    <textarea id="eventDescription" class="form-control" placeholder="Enter event description"></textarea>
+					    
+					  </div>
+					  
+					  <div class="row">
+					  	<div class="col-lg-6">
+							  <div class="form-group">
+							    
+							    <label for="startDate">Event Start Date</label>
+							    <input id="startDate" class="form-control" placeholder="Enter start date"></textarea>
+							    
+							  </div>
+						</div>
+						<div class="col-lg-6">
+						  <div class="form-group">
+						    
+						    <label for="endDate">Event End Date</label>
+						    <input id="endDate" class="form-control" placeholder="Enter event end date"></textarea>
+						    
+						  </div>
+						 </div>
+					  </div>
+					  
+					  <button type="submit" class="btn btn-default">Submit</button>
+					  <span id="vueventPublishBtnContainer"></span>
+					</form>
+					
+					<!-- //YOUR FORM ENDS -->
+					
+				</div>
+			</div>
+		</div>		
+	</body>
+	
+	<script src="{% static 'js/vuevent.publisher.js' %}" ></script>
+	
+	<script>
+		
+		$(document).ready(function(){
+			
+			 $('#event-form').vueventPublisher({
+				clientID: 'uqjSwKuBe.4tShiXzEl!1oY8KkSaNy=EVrDnf2CI',
+				redirectURI: 'http://localhost:8888',
+				fields:{
+					title: '#eventTitle',
+					description: '#eventDescription',
+					startDate: '#startdate',
+					endDate: '#endDate',
+					extendedDescription: '#eventDescription',
+					location: '#eventLocation'
+				}
+			});
+			
+		});
+	</script>
+	
+</html>

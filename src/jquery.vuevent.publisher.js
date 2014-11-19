@@ -43,16 +43,10 @@
             redirectURI: 'http://localhost:8888',
             buttonID: 'btnVueventPublishEvent',
             formID: '',
-            fieldMap: {
-            	title: 'title',
-            	startTime: 'start_time',
-            	endTime: 'end_time',
-            	location: 'location',
-            	extendedDescription: 'extended_description',
-            },
-            fields: {}
+            fields: {},
             
         };
+    
     
     // The actual plugin constructor
     function Plugin( element, options ) {
@@ -67,7 +61,6 @@
         
         this._defaults = defaults;
         this._name = pluginName;
-        this._auth = {}
         
         this.init();
     }
@@ -82,23 +75,19 @@
 			if(!window.name){
 				window.name = 'vueventParent' ;
 			}
-			
+
 			var self = this,
     			strButtonID = '#' + self._defaults.buttonID;
 				vueventPublisherHandle = self;
 				
 			if(window.name == 'vueventPopup') {
 				
-				window.opener.vueventPublisherHandle.publishEvent(false, location.href);
+				window.opener.vueventPublisherHandle.publishEvent(location.href);
 				window.close();
-				
 			}
-
-	    	//Add button to container
-	    	$('#vueventPublishBtnContainer').append('<button id="vueventBtnPublish">Publish on Vuevent</button>')
-	    	
+			
 	    	//Assign click to the button, this will initiate the publshing.
-	    	$(self.element).on('click', '#vueventBtnPublish', function(e){
+	    	$(strButtonID).click(function(e){
 	    		e.preventDefault();
 	    		
 	    		//open window that will authorize the user
@@ -111,15 +100,10 @@
 		            'redirect_uri': self.options.redirectURI
 		      	};    		
 	    		
-	    		if (self._auth.access_token){
-	    			self.publishEvent(true, null);
-	    		} else {
-	    			var url = self.options.authURL + '?' + $.param(authData);
-					win = window.open(url, 'vueventPopup');
-	    		}
+	    		var url = self.options.authURL + '?' + $.param(authData);
+				win = window.open(url, 'vueventPopup');
 				
 	    	});
-	    	
 		},
 		 /*--------------------------------------------------------------------
 		 * Function to parse the url query result from the popup.
@@ -150,19 +134,11 @@
 	    /*---------------------------------------------------------------------
 		 * Function to handle the popup that will be used for authorization.
 		 *-------------------------------------------------------------------*/    
-		publishEvent: function(hasToken, result){
-			var self = this;
-			
-			if (!hasToken){
-				params = self._auth = self.getQuery(result);
-			} else {
-				params = self._auth;
-			}
-			
-			console.log(self._auth)
-		    	
-		    var baseURI = self.options.baseURI;
-		    	
+		publishEvent: function(result){
+			var self = this,
+		    	params = self.getQuery(result),
+		    	baseURI = self.options.baseURI
+		    
 		    $.ajax({
 		    	  url: baseURI + 'events/',
 		    	  method: 'GET',
@@ -191,20 +167,12 @@
 		 * Function to generate a dictionary of mapped fields and their values.
 		 *-------------------------------------------------------------------*/    
 		getFormData: function(fields){
-			var self = this,
-				data = {}
+			var data = {}
 			
 			if(Object.keys(fields).length > 0){
 				
 				$.each(fields, function(field, value){
-					
-					var fieldName = self.options.fieldMap[field];
-					var fieldValue = $(value).val();
-					
-					if (fieldName && fieldValue){
-						data[fieldName] = $(value).val();
-					}
-					
+					data[field] = $(value).val();
 				});
 			}
 			return data

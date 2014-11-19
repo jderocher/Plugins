@@ -1,0 +1,20 @@
+#[VIRTUAL ENVIRONMENT]
+venv
+
+#[PYTHON]
+*.pyc
+*.pyo
+
+#[ECLIPSE]
+.project
+.pydevproject
+.settings
+,metadata
+
+#[DJANGO]
+*.log
+media/
+
+#[MAC]
+.DS_Store
+
