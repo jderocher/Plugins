@@ -29,16 +29,34 @@ To use this plugin, you need to have an account and an application setup on Vuev
 
 	a. JQuery:
 	
-		```html
 			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-		```
 		
 	b. Vuevent Publisher Plugin
-		```html
-			<script src="http://some_cdn/vuevent.publish.js"></script> 
-		```
+	
+			<script src="http://some_cdn/vuevent.publish.min.js"></script> 
 
 2. Setup:
+
+
+	<script>
+		
+		$(document).ready(function(){
+			
+			 $('#event-form').vueventPublisher({
+				clientID: 'your_client_id',
+				redirectURI: 'your_redirect_uri',
+				fields:{
+					title: '#eventTitle',
+					description: '#eventDescription',
+					startDate: '#startdate',
+					endDate: '#endDate',
+					extendedDescription: '#eventDescription',
+					location: '#eventLocation'
+				}
+			});
+		});
+	</script>
+
 
 
 	
