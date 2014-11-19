@@ -28,4 +28,4 @@ To use this plugin, you need to have an account and an application setup on Vuev
 1. Requirements:
 	a. JQuery:
 	
-		~~~ <script src=""></script> ~~~ 
+		``` <script src=""></script> ```
