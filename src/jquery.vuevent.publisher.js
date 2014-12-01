@@ -44,11 +44,12 @@
             buttonID: 'btnVueventPublishEvent',
             formID: '',
             fieldMap: {
-            	title: 'title',
-            	startTime: 'start_time',
-            	endTime: 'end_time',
-            	location: 'location',
-            	extendedDescription: 'extended_description',
+            	title: {name: 'title', type: 'string'},
+            	startTime: {name: 'start_time', type: 'datetime'},
+            	endTime: {name: 'end_time', type: 'datetime'},
+            	location: {name: 'location', type: 'string'},
+            	extendedDescription: {name: 'extended_description', type: 'string'},
+            	shortDescription:  {name: 'short_description', type: 'string'},
             },
             fields: {}
             
@@ -107,6 +108,8 @@
 		 *-------------------------------------------------------------------*/ 
 		init: function () {
 			
+			
+			
 			if(!window.name){
 				window.name = 'vueventParent' ;
 			}
@@ -114,6 +117,9 @@
 			var self = this,
     			strButtonID = '#' + self._defaults.buttonID;
 				vueventPublisherHandle = self;
+				
+			self.dateConversionFormat = "MM/DD/YYYY HH:mm A";
+			self.dateDisplayFormat = "MM/DD/YYYY HH:mm A";
 				
 			if(window.name == 'vueventPopup') {
 				
@@ -229,11 +235,26 @@
 				
 				$.each(fields, function(field, value){
 					
-					var fieldName = self.options.fieldMap[field];
-					var fieldValue = $(value).val();
-					
-					if (fieldName && fieldValue){
-						data[fieldName] = $(value).val();
+					var field = self.options.fieldMap[field];
+
+					if(field){
+						var fieldName = field.name;
+						var fieldValue = $(value).val();
+						
+						if (fieldName && fieldValue){
+							
+							if (field.type == 'datetime'){
+								var convertedDate = moment(fieldValue, self.dateConversionFormat);
+								
+								if (convertedDate.isValid()){
+									fieldValue = convertedDate.format(self.dateDisplayFormat);
+								}
+								
+							}
+
+							data[fieldName] = fieldValue;
+						}
+						
 					}
 					
 				});

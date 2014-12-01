@@ -1,0 +1,10 @@
+{
+    "127.0.0.1": {
+        "caCode": "vuevent",
+        "title": "[vuevent] WebSite",
+        "validFrom": "",
+        "validTo": "",
+        "locale": "en",
+        "home": "/index"
+    }
+}

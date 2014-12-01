@@ -1,0 +1,18 @@
+{
+    "x-127.0.0.1": {
+        "caCode": "hello",
+        "title": "[hello] WebSite",
+        "validFrom": "",
+        "validTo": "",
+        "locale": "en",
+        "home": "/index"
+    },
+    "127.0.0.1": {
+        "caCode": "publisher",
+        "title": "Vuevent Publisher Demo",
+        "validFrom": "",
+        "validTo": "",
+        "locale": "en",
+        "home": "/index"
+    }
+}

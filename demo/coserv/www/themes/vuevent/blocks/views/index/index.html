@@ -1,0 +1,64 @@
+<div class="page-header alert alert-info">
+	<h4>
+		Your Business's Event Publishing Page 
+		<br>
+		<br>
+		<small><span class="glyphicon glyphicon-info-sign"></span> Click on the vuevent button below to publish the event on Vuevent.</small>
+	</h4>
+</div>
+
+<!--  CLIENT FORM START -->
+
+<form id="event-form" role="form" method="post">
+	<div class="form-group">
+		<label for="eventTitle">Event Name</label> <input type="text"
+			class="form-control" id="eventTitle" placeholder="Enter event name">
+	</div>
+	<div class="form-group">
+
+		<label for="eventLocation">Event Location</label>
+		<textarea id="eventLocation" class="form-control"
+			placeholder="Enter Location"></textarea>
+
+	</div>
+	<div class="form-group">
+
+		<label for="shortDescription">Brief Description</label>
+		<textarea id="shortDescription" class="form-control"
+			placeholder="Enter a short description about the event"></textarea>
+
+	</div>
+	<div class="form-group">
+
+		<label for="eventDescription">Extended Description</label>
+		<textarea id="eventDescription" class="form-control"
+			placeholder="Enter extended description about the event"></textarea>
+
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="form-group">
+
+				<label for="startDate">Event Start Date</label> <input
+					id="startDate" class="form-control" placeholder="Enter start date">
+				</textarea>
+
+			</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="form-group">
+
+				<label for="endDate">Event End Date</label> <input id="endDate"
+					class="form-control" placeholder="Enter event end date">
+				</textarea>
+
+			</div>
+		</div>
+	</div>
+
+	<button type="submit" class="btn btn-default">Submit</button>
+	<span id="vueventPublishBtnContainer"></span>
+</form>
+
+<!-- //CLIENT FORM ENDS -->

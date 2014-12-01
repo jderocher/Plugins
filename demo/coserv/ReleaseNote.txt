@@ -1,0 +1,51 @@
+0.9.1
+------
+  . Fixed a bug which would cause JS and CSS templates failed to read multi-lingual phrases.
+
+0.9.0
+------
+  . Introduce JASS.
+
+0.8.9
+------
+  . The 'www' path is now configurable.
+  . Fix bugs about some multi-hosting problems.
+  . Fix some path problems when running on Windows.
+
+0.8.8
+------
+  . Support SASS with server-side automatic compilation.
+  . Replaced all fs.readFileSync() calls with fs.readFile() for performance improvement.
+  . Added blogs to the demo. Two themes are available to display contents stored in COIMOTION.
+  . Fixed bugs in CSS aggregation. Key-frames and selector groups failed to work previously.
+
+
+0.8.7
+------
+  . Added a shared block 'editor': to be invoked by websites to provide page editing capabilities.
+  . An example to utilize the COIMOTION BaaS was added to the demo app.
+  . A few bug fixes including problems connecting to BaaS services.
+
+
+0.8.6:
+------
+  . Added command line interfaces (CLI) to
+        1. add websites to coServ
+        2. add new pages to a website.
+  . Release Date: 5/29/2014
+
+
+0.8.5:
+------
+  . Changed how a local module is invoked. The run() method now will take a second parameter which is
+    a callback function. A local module calls the provided callback function to notify coServ that
+    its job has done.
+  . Bug fixes to help coServ better deal with more content types (not just JSON).
+  . Fixed a bug in uploader. The bug could cause coServ fail to upload files to the COIMOTION API engine.
+  . A new demo is included in this release. The old demo is still around. If you want to run the old demo,
+    try http://localhost:8080. You can also modify the www/sites.json file to bring back the old demo.
+
+
+0.8.0:
+------
+The first public release.
