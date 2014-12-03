@@ -91,7 +91,7 @@ https://www.vuevent.com/o/applications
 	The event creation from on Vuevent is looking for the following fields and are required. You 
 	will need to map these fields to the fields on your form in the configuration:
 	
-	FIELD MAP:
+	**FIELD MAP:**
 	
 	|#  | VERBOSE NAME				| PLUGIN FIELD KEY ID |
 	|---|-------------------------------|---------------------|
@@ -134,7 +134,48 @@ https://www.vuevent.com/o/applications
 	 The ID can be altered by changing the value of the option, in the plugin configuration above:
 	 	
 	 	buttonID  
-	 	
+
+### Use the plugin:
+
+We have installed a small javascript webserver inside the demo folder of the respository.
+This is to help you quickly run and test the plugin.
+
+1. Dependencies:
+
+a. NODEJS: 
+
+http://nodejs.org/download/
+
+2. After node has successfully been installed, with your terminal of choice, 
+change your current working directory to the <file-system-path>/Plugins/demo
+
+3. The plugin configuration file for this demo resides below:
+
+<file-system-path>Plugins/demo/coserv/www/cont/shared/js/lib/main.js
+ 
+You will need to modify this file and add your own CLIENT ID etc.
+
+4. Run the following command:
+
+	node coserv
+	
+5. A Javascript based webserver will run and make available the plugin page on
+
+http://127.0.0.1:8322
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/usage-step-1.png "Usage Step 1")
+
+6. Authorize the plugin to use your Vuevent account:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/usage-step-2.png "Usage Step 2")
+
+7. After successful authorization, the information in your own event creation form is extracted and inserted into the Vuevent Event creation form. You can now add information to the required fields and then hit create and voila !!
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/usage-step-3.png "Usage Step 3")
+
+
+
+
 	 
 
 
