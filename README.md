@@ -44,7 +44,7 @@ After successful, verification you are ready to create your very own Vuevent OAU
 
 2) After a successful login, redirect your browser using the link
 
-	https://www.vuevent.com/o/applications
+	GOTO: https://www.vuevent.com/o/applications
 	
 3) Click 'New Application' to create your application:
 
@@ -56,7 +56,7 @@ After successful, verification you are ready to create your very own Vuevent OAU
 
 5) This page will tell you that your application has been saved. You can then click edit to change information in your application:
 
-	#### IMPORTANT: Note down CLIENT ID and the approved URL's from the screen below, we will need this later :-)
+	IMPORTANT: Note down CLIENT ID and the approved URL's from the screen below, we will need this later :-)
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-5.png "OAUTH2 Application Setup Step 5.")
 
