@@ -42,9 +42,9 @@ After successful, verification you are ready to create your very own Vuevent OAU
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-1.png "OAUTH2 Application Setup Step 1.")
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-2.png "OAUTH2 Application Setup Step 2.")
 
-2) After a successful login, redirect your browser using the link
+2) After a successful login, redirect your browser using the link:
 
-	GOTO: https://www.vuevent.com/o/applications
+	https://www.vuevent.com/o/applications
 	
 3) Click 'New Application' to create your application:
 
@@ -66,28 +66,26 @@ After successful, verification you are ready to create your very own Vuevent OAU
 
 
 
-1. Signup for business account on Vuevent: 
-	
-	https://www.vuevent.com
-	
-2. Create a publishing application for your business or organization: 
-	
-	https://www.vuevent.com/o/applications
-	
-3. *Add more steps here later *
+### Download the Plugin:
 
-4. Note down your client id
+	git clone https://github.com/jderocher/Plugins.git
 
-5. ...and we are done !
+### Configure the Plugin:
 
-
-### Plugin usage
-
-1. Requirements:
+1. Dependencies:
 	
-		```html
-			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		```
+	JQUERY: 
+	
+	```html
+			<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	```
+	
+	MOMENT-JS
+
+	```html
+			<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+	```
+	
 	
 	
 
