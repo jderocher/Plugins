@@ -12,9 +12,13 @@ This plugin is to be used by registered Vuevent businesses to publish their even
 
 ## Getting Started
 
-### Vuevent Account Setup
+### Signup for business account on Vuevent
 
-To use this plugin, you need to have an account and an application setup on Vuevent. Follow the steps below:
+The first step is to sign up for a Business Account with Vuevent (its free !!):
+
+	Goto: https://www.vuevent.com
+	
+	![Alt text](jderocher/Plugins/screenshots/registration-step-1.png "Business Account Registration Step 1.")
 
 1. Signup for business account on Vuevent: 
 	
