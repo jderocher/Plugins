@@ -20,6 +20,21 @@ The first step is to sign up for a Business Account with Vuevent (its free !!):
 	
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-1.png "Business Account Registration Step 1.")
 
+2. Choose to sign up for a business account:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-2.png "Business Account Registration Step 2.")
+
+3. Enter your business information and register:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-3.png "Business Account Registration Step 3.")
+
+4. You are done! Now, the dilligent Vuevent Team will get verify and enable your account shortly !
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-4.png "Business Account Registration Step 4.")
+ 
+
+### Create an OAUTH2 application.
+
 
 
 1. Signup for business account on Vuevent: 
