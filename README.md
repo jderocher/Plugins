@@ -77,19 +77,29 @@ After successful, verification you are ready to create your very own Vuevent OAU
 	JQUERY: 
 	
 	```html
-			<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	```
 	
 	MOMENT-JS
 
 	```html
-			<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 	```
-	
-	
-	
 
 2. Setup:
+
+	The event creation from on Vuevent is looking for the following fields and are required. You 
+	will need to map these fields to the fields on your form in the configuration:
+	
+	FIELD MAP:
+	
+	VERBOSE NAME					PLUGIN FIELD KEY ID
+	1. Event Name					title
+	2. Event Start Date Time			startDate
+	3. Event End Date Time			endDate
+	4. Event Short Descriptoin		shortDescription
+	5. Event Extended description		extendedDescription
+	6. Physical Address				location
 
 	```html 
 	<script>
@@ -99,17 +109,32 @@ After successful, verification you are ready to create your very own Vuevent OAU
 				clientID: 'your_client_id',
 				redirectURI: 'your_redirect_uri',
 				fields:{
-					title: '#eventTitle',
-					description: '#eventDescription',
-					startDate: '#startdate',
-					endDate: '#endDate',
-					extendedDescription: '#eventDescription',
-					location: '#eventLocation'
+					title: '#eventTitleFieldID',
+					description: '#eventDescriptionFieldID',
+					startDate: '#startDateFieldID',
+					endDate: '#endDateFieldID',
+					shortDescription: '#shortDescriptionFieldID',
+					extendedDescription: '#eventDescriptionFieldID',
+					location: '#eventLocation',
 				}
 			});
 		});
 	</script>
 	```
+	
+	The code above will attach the plugin with your event creation form. The plugin, then looks for
+	a button container with an ID, in which to append the button element:
+		
+		#vueventPublishBtnContainer
+		
+	 The button by default has an ID 
+	 	#vueventBtnPublish 
+	 	
+	 The ID can be altered by changing the value of the option, in the plugin configuration above:
+	 	
+	 	buttonID  
+	 	
+	 
 
 
 
