@@ -44,7 +44,7 @@ After successful verification, you are ready to create your very own Vuevent OAU
 
 2) After a successful login, redirect your browser using the link:
 
-https://www.vuevent.com/o/applications
+https://www.vuevent.com/o/applications/
 	
 3) Click 'New Application' to create your application:
 
