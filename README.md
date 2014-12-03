@@ -173,8 +173,7 @@ http://127.0.0.1:8322
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/usage-step-3.png "Usage Step 3")
 
-
-
+8. DONE !!!
 
 	 
 
