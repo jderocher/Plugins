@@ -44,7 +44,7 @@ After successful, verification you are ready to create your very own Vuevent OAU
 
 2) After a successful login, redirect your browser using the link:
 
-	https://www.vuevent.com/o/applications
+https://www.vuevent.com/o/applications
 	
 3) Click 'New Application' to create your application:
 
@@ -93,13 +93,14 @@ After successful, verification you are ready to create your very own Vuevent OAU
 	
 	FIELD MAP:
 	
-	VERBOSE NAME					PLUGIN FIELD KEY ID
-	1. Event Name					title
-	2. Event Start Date Time			startDate
-	3. Event End Date Time			endDate
-	4. Event Short Descriptoin		shortDescription
-	5. Event Extended description		extendedDescription
-	6. Physical Address				location
+	|#  | VERBOSE NAME				| PLUGIN FIELD KEY ID |
+	|---|-------------------------------|---------------------|
+	|1. | Event Name				| title			 |
+	|2. | Event Start Date Time		| startDate		 |
+	|3. | Event End Date Time			| endDate			 |	
+	|4. | Event Short Descriptoin		| shortDescription	 |
+	|5. | Event Extended description	| extendedDescription |
+	|6. | Physical Address			| location			 |
 
 	```html 
 	<script>
