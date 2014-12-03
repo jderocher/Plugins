@@ -1,6 +1,14 @@
 # Vuevent 'Event' Publisher
 
-This plugins is to be used by registered businesses to publish their events on https://www.vuevent.com/ via their own website. It aims to be a simple dropin on your event page, where it will be configured to capture event data from your web form. The captured data can then be published onto Vuevent with a click of a button.
+This plugin is to be used by registered Vuevent businesses to publish their events on Vuevent via their own website. It aims to be a simple dropin on your event creation page, where it will be configured to capture event data from your web form. This captured data can then be published onto Vuevent with a click of a button.
+
+## 5 Step Summary:
+
+1. Signup for business account on Vuevent.
+2. Create an OAUTH2 application.
+3. Download the plugin.
+4. Configure the plugin.
+5. Use the plugin.
 
 ## Getting Started
 
