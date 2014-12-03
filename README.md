@@ -18,7 +18,7 @@ The first step is to sign up for a Business Account with Vuevent (its free !!):
 
 	Goto: https://www.vuevent.com
 	
-	![Alt text](jderocher/Plugins/screenshots/registration-step-1.png "Business Account Registration Step 1.")
+	![Alt text](https://raw.github.com/jderocher/master/Plugins/screenshots/registration-step-1.png "Business Account Registration Step 1.")
 
 1. Signup for business account on Vuevent: 
 	
