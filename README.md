@@ -16,9 +16,11 @@ This plugin is to be used by registered Vuevent businesses to publish their even
 
 The first step is to sign up for a Business Account with Vuevent (its free !!):
 
-	Goto: https://www.vuevent.com
+1. Goto: https://www.vuevent.com
 	
-![Alt text](https://raw.github.com/jderocher/master/Plugins/screenshots/registration-step-1.png "Business Account Registration Step 1.")
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-1.png "Business Account Registration Step 1.")
+
+
 
 1. Signup for business account on Vuevent: 
 	
