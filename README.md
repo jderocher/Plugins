@@ -12,11 +12,11 @@ This plugin is to be used by registered Vuevent businesses to publish their even
 
 ## Getting Started
 
-### Signup for business account on Vuevent
+### Signup for a business account on Vuevent
 
-The first step is to sign up for a Business Account with Vuevent (its free !!):
+The first step is to sign up for a Business Account with Vuevent (it's free!):
 
-1) Goto: https://www.vuevent.com
+1) Go to: https://www.vuevent.com
 	
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-1.png "Business Account Registration Step 1.")
 
@@ -28,14 +28,14 @@ The first step is to sign up for a Business Account with Vuevent (its free !!):
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-3.png "Business Account Registration Step 3.")
 
-4) You are done! Now, the dilligent Vuevent Team will verify and enable your account shortly !
+4) You are done! Now, the dilligent Vuevent team will verify and enable your account shortly!
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-4.png "Business Account Registration Step 4.")
  
 
 ### Create an OAUTH2 application.
 
-After successful, verification you are ready to create your very own Vuevent OAUTH2 application:
+After successful verification, you are ready to create your very own Vuevent OAUTH2 application:
 
 1) Login to Vuevent:
 
@@ -60,7 +60,7 @@ https://www.vuevent.com/o/applications
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-5.png "OAUTH2 Application Setup Step 5.")
 
-6) Last Step: This window will show a list of all the applications created by you:
+6) Last Step: This window will show a list of all the applications you have created:
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-6.png "OAUTH2 Application Setup Step 6.")
 
@@ -88,7 +88,7 @@ https://www.vuevent.com/o/applications
 
 2. Setup:
 
-	The event creation from on Vuevent is looking for the following fields and are required. You 
+	The event creation form on Vuevent is looking for the following required fields. You 
 	will need to map these fields to the fields on your form in the configuration:
 	
 	**FIELD MAP:**
@@ -124,7 +124,7 @@ https://www.vuevent.com/o/applications
 	```
 	
 	The code above will attach the plugin with your event creation form. The plugin, then looks for
-	a button container with an ID, in which to append the button element:
+	a button container with an ID, in which you must append the button element:
 		
 		#vueventPublishBtnContainer
 		
@@ -180,4 +180,4 @@ http://127.0.0.1:8322
 
 
 	
-		
+
