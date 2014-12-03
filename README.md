@@ -12,23 +12,23 @@ This plugin is to be used by registered Vuevent businesses to publish their even
 
 ## Getting Started
 
-### 1. Signup for business account on Vuevent
+### Signup for business account on Vuevent
 
 The first step is to sign up for a Business Account with Vuevent (its free !!):
 
-##### 2. Goto: https://www.vuevent.com
+1) Goto: https://www.vuevent.com
 	
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-1.png "Business Account Registration Step 1.")
 
-##### 3. Choose to sign up for a business account:
+2) Choose to sign up for a business account:
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-2.png "Business Account Registration Step 2.")
 
-##### 4.Enter your business information and register:
+3) Enter your business information and register:
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-3.png "Business Account Registration Step 3.")
 
-##### 5. You are done! Now, the dilligent Vuevent Team will get verify and enable your account shortly !
+4) You are done! Now, the dilligent Vuevent Team will get verify and enable your account shortly !
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-4.png "Business Account Registration Step 4.")
  
