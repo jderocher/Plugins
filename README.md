@@ -28,12 +28,39 @@ The first step is to sign up for a Business Account with Vuevent (its free !!):
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-3.png "Business Account Registration Step 3.")
 
-4) You are done! Now, the dilligent Vuevent Team will get verify and enable your account shortly !
+4) You are done! Now, the dilligent Vuevent Team will verify and enable your account shortly !
 
 ![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/registration-step-4.png "Business Account Registration Step 4.")
  
 
 ### Create an OAUTH2 application.
+
+After successful, verification you are ready to create your very own Vuevent OAUTH2 application:
+
+1) Login to Vuevent:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-1.png "OAUTH2 Application Setup Step 1.")
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-2.png "OAUTH2 Application Setup Step 2.")
+
+2) After a successful login, redirect your browser using the link
+
+	https://www.vuevent.com/o/applications
+	
+3) Click 'New Application' to create your application:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-3.png "OAUTH2 Application Setup Step 3.")
+
+4) Enter required information about your application and save:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-4.png "OAUTH2 Application Setup Step 4.")
+
+5) This page will tell you that your application has been saved. You can then click edit to change information in your application:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-5.png "OAUTH2 Application Setup Step 5.")
+
+6) Last Step: This window will show a list of all the applications created by you:
+
+![Alt text](https://raw.github.com/jderocher/Plugins/master/screenshots/application-setup-step-6.png "OAUTH2 Application Setup Step 6.")
 
 
 
